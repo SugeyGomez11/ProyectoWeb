@@ -1,0 +1,21 @@
+<!--templates/contacto/contacto.html-->
+
+<!-- Se toma la plantilla base para la pagina general-->
+{% extends "ProyectoWebApp/base.html" %}
+
+<!-- Se carga el css, img, vendor que da formato-->
+{% load static %}
+
+<!--Construccion del bloque de contenido-->
+{% block content %}
+<div class="contenedorFormulario">
+    {% if "valido" in request.GET %}
+        <p style="color: white">Información enviada correctamente, gracias</p>
+    {% endif %}
+    <form action="" method="POST" style="text-align: center;">
+        {% csrf_token %}
+        <table style="color: white; margin: 20px auto">{{miFormulario.as_table}}</table>
+        <input type="submit" value="Enviar" style= "width:150px">
+    </form>
+</div>
+{% endblock %}

@@ -1,0 +1,48 @@
+<!--ProyectoWebApp/templates/ProyectoWebApp/home.html-->
+
+<!-- Se toma la plantilla base para la pagina general-->
+{% extends "ProyectoWebApp/base.html" %}
+
+<!-- Se carga el css, img, vendor que da formato-->
+{% load static %}
+
+<!--Construccion del bloque de contenido-->
+{% block content %}
+   <!-- Heading -->
+   <section class="page-section clearfix">
+    <div class="container">
+      <div class="intro">
+        <img class="intro-img img-fluid mb-3 mb-lg-0 rounded" src="{% static 'ProyectoWebApp/img/principal.jpg' %}" alt="">
+        <div class="intro-text left-0 text-center bg-faded p-5 rounded">
+          <h2 class="section-heading mb-4" >
+            <span class="section-heading-upper">Entregas inmediatas</span>
+            <span class="section-heading-lower">Somos el #1</span>
+          </h2>
+          <p class="mb-3">Calidad y precio accesibles, llegarán a tus manos muy rápido y en buen estado.
+          </p>
+         
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  
+    <!-- Message -->
+    <section class="page-section cta">
+      <div class="container">
+        <div class="row">
+          <div class="col-xl-9 mx-auto">
+            <div class="cta-inner text-center rounded">
+              <h2 class="section-heading mb-4">
+                <span class="section-heading-upper">Ropa de calidad</span>
+                <span class="section-heading-lower">Los mejores precios</span>
+              </h2>
+              <p class="mb-0">Con más de 50 años de experiencia a nuestras espaldas, desde Tienda Online tenemos los conocimientos y herramientas necesarios para llevar tu ropa de preferencia a la puerta de su casa con puntualidad y profesionalidad.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    {% endblock %}

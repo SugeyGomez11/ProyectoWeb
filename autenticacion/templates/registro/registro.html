@@ -1,0 +1,22 @@
+<!--templates/registro/registro.html-->
+
+<!-- Se toma la plantilla base para la pagina general-->
+{% extends "ProyectoWebApp/base.html" %}
+
+<!-- Se carga el css, img, vendor que da formato-->
+{% load static %}
+
+<!-- Se carga las crispy forms para la representacion de formularios más elegantes -->
+{% load crispy_forms_tags %}
+
+<!--Construccion del bloque de contenido-->
+{% block content %}
+    <form method="POST" action="" style="color: white;">
+        {% csrf_token %}
+
+        <div style="width: 75%; margin: auto;">
+            {{form|crispy}}
+            <button type="submit" class="btn btn-success">Regístrate</button>
+        </div>
+    </form>
+{% endblock %}
